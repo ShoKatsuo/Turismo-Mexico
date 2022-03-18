@@ -9,21 +9,20 @@
 /* Footer */
 .footer {
   width: 100%;
-  /*
-  padding: 0 2%;
-  */
+  height: 100%;
   padding: 2rem 0;
   background-color: black;
   position: fixed;
   color: #fff;
 }
-
+/*
 .footer-container {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 10px 0;
+  padding: 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+*/
