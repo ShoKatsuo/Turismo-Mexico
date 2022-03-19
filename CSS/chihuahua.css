@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
 
@@ -193,49 +194,3 @@ body {
 }
 
 /* Main */
-.main iframe {
-  width: 100%;
-  height: 1000px;
-  border-style: none;
-}
-
-.footer iframe {
-  width: 100%;
-  height: 100%;
-  border-style: none;
-}
-
-/* Estilos de main*/
-.container-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-img {
-  max-width: 100%;
-}
-h2,
-h3 {
-  text-align: center;
-  color: #fff;
-}
-h2 {
-  font-size: 2em;
-}
-
-.present iframe {
-  display: flex;
-  flex-wrap: wrap;
-  left: 0;
-  right: 0;
-}
-
-/* Main */
-
-/* Destinos*/
-.container-des {
-  size: 100%;
-  width: 100%;
-  height: 100%;
-  border-style: none;
-}
