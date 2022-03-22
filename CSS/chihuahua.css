@@ -7,7 +7,7 @@
   padding: 0px;
 }
 body {
-  background-color: white;
+  background-color: #333;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -193,9 +193,13 @@ body {
   transform: rotate(360deg);
 }
 
-h1 {
-  color: black;
+/* Main */
+.main {
+  position: absolute;
+  top: 120px;
+  color: #fff;
 }
-h2 {
-  color: black;
+.main h1 {
+  text-align: center;
 }
+

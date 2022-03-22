@@ -6,7 +6,7 @@
   padding: 0px;
 }
 body {
-  background-color: white;
+  background-color: #333;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -229,8 +229,6 @@ h2 {
   left: 0;
   right: 0;
 }
-
-/* Main */
 
 /* Destinos*/
 .container-des {
