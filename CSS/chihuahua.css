@@ -194,12 +194,6 @@ body {
 }
 
 /* Main */
-.main {
-  position: absolute;
-  top: 120px;
-  color: #fff;
+p{
+  color: white;
 }
-.main h1 {
-  text-align: center;
-}
-
