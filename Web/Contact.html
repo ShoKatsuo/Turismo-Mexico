@@ -52,13 +52,97 @@
             </nav>
           </div>
     </header>
+
     <main class="main">
-
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <!-- formulario multipaso -->
+      <form id="msform">
+        <!-- Barra de progreso -->
+        <ul id="progressbar">
+          <li class="active">Configuración de la cuenta</li>
+          <li>Perfiles sociales</li>
+          <li>Detalles personales</li>
+        </ul>
+        <!-- conjuntos de campos -->
+        <fieldset>
+          <h2 class="fs-title">Crea tu cuenta</h2>
+          <h3 class="fs-subtitle">Este es el paso 1</h3>
+          <input type="text" name="email" placeholder="Email" />
+          <input type="password" name="pass" placeholder="Contraseña" />
+          <input type="password" name="cpass" placeholder="Confirmar Contraseña" />
+          <input type="button" name="next" class="next action-button" value="Siguiente" />
+        </fieldset>
+        <fieldset>
+          <h2 class="fs-title">Perfiles sociales</h2>
+          <h3 class="fs-subtitle">Tu presencia en las redes sociales</h3>
+          <input type="text" name="twitter" placeholder="Twitter" />
+          <input type="text" name="facebook" placeholder="Facebook" />
+          <input type="text" name="gplus" placeholder="Google Plus" />
+          <input type="button" name="previous" class="previous action-button" value="Previous" />
+          <input type="button" name="next" class="next action-button" value="Si" />
+        </fieldset>
+        <fieldset>
+          <h2 class="fs-title">Detalles personale</h2>
+          <h3 class="fs-subtitle">Nunca lo venderemos</h3>
+          <input type="text" name="fname" placeholder="Primer nombre" />
+          <input type="text" name="lname" placeholder="Apellido" />
+          <input type="text" name="phone" placeholder="Teléfono" />
+          <textarea name="address" placeholder="Dirección></textarea>
+          <input type="button" name="previous" class="previous action-button" value="Previa" />
+          <input type="submit" name="submit" class="submit action-button" value="Enviar" />
+        </fieldset>
+      </form>
     </main>
-    <footer class="footer">
 
+    <footer class="footer">
+      <div class="wrapper">
+        <!-- Facebook-->
+          <div class="button">
+            <div class="icon">
+              <i class="fab fa-facebook-f"></i>
+            </div>
+            <span>Facebook</span>
+          </div>
+          <!-- Twitter -->
+          <div class="button">
+            <div class="icon">
+              <i class="fab fa-twitter"></i>
+            </div>
+            <span>Twitter</span>
+          </div>
+          <!-- Instagram -->
+          <div class="button">
+            <div class="icon">
+              <i class="fab fa-instagram"></i>
+            </div>
+            <span>Instagram</span>
+          </div>
+          <!-- Github -->
+          <div class="button">
+            <div class="icon">
+              <i class="fab fa-github"></i>
+            </div>
+            <span>Github</span>
+          </div>
+          <!-- Youtube -->
+          <div class="button">
+            <div class="icon">
+              <i class="fab fa-youtube"></i>
+            </div>
+            <span>YouTube</span>
+          </div>
+      </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../JS/main.js"></script>
+    <script src="../JS/contact.js"></script>
 </body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="../JS/main.js"></script>
 </html>

@@ -1,13 +1,22 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 
 * {
   margin: 0px;
   padding: 0px;
 }
+
+html {
+  height: 100%;
+
+  /*fondo = combo de gradiente + patrón de imagen*/
+  background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+}
+
 body {
-  background-color: #333;
-  font-family: "Open Sans", sans-serif;
+  font-family: montserrat, arial, verdana;
 }
 
 /* Header*/
@@ -193,9 +202,120 @@ body {
 }
 
 /* Main */
-.main {
+
+/*estilos de formulario*/
+#msform {
+  width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+}
+#msform fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+
+  /*apilamiento de conjuntos de campos uno encima de otro*/
+  position: relative;
+}
+/*Ocultar todo excepto el primer conjunto de campos*/
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+/*entradas*/
+#msform input,
+#msform textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2c3e50;
+  font-size: 13px;
+}
+/*Botones*/
+#msform .action-button {
+  width: 100px;
+  background: #27ae60;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+#msform .action-button:hover,
+#msform .action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #27ae60;
+}
+/*encabezados*/
+.fs-title {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+.fs-subtitle {
+  font-weight: normal;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+}
+/*barra de progreso*/
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  /*Contadores CSS para numerar los pasos*/
+  counter-reset: step;
+}
+#progressbar li {
+  list-style-type: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 33.33%;
+  float: left;
+  position: relative;
+}
+#progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 20px;
+  line-height: 20px;
+  display: block;
+  font-size: 10px;
+  color: #333;
+  background: white;
+  border-radius: 3px;
+  margin: 0 auto 5px auto;
+}
+/*conectores de la barra de progreso*/
+#progressbar li:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: white;
   position: absolute;
-  top: 120px;
-  left: 600px;
-  color: #fff;
+  left: -50%;
+  top: 9px;
+  z-index: -1; /*Ponerlo detrás de los números*/
+}
+#progressbar li:first-child:after {
+  /*Conector no necesario antes del primer paso*/
+  content: none;
+}
+/*marcar pasos activos/completados green*/
+/*El número del paso y el conector que lo precede = green*/
+#progressbar li.active:before,
+#progressbar li.active:after {
+  background: #27ae60;
+  color: white;
 }
