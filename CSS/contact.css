@@ -3,32 +3,42 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 
-* {
+:root {
+  --colorTextos: #49454567;
+}
+
+*,
+::before,
+::after {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
+/*
 html {
   height: 100%;
-
-  /*fondo = combo de gradiente + patrón de imagen*/
-  background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
 }
-
+*/
 body {
-  font-family: montserrat, arial, verdana;
+  font-family: "Roboto", sans-serif;
+  /*fondo = combo de gradiente + patrón de imagen*/
+  /*background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6)); */
+  background: #4568DC;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #B06AB3, #4568DC);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /* Header*/
 .header {
-  font-family: "Roboto", sans-serif;
-  box-sizing: border-box;
   width: 100%;
   /*
   padding: 0 2%;
   */
   padding: 2rem 0;
-  box-sizing: border-box;
   background-color: black;
   position: fixed;
   color: #fff;
@@ -105,11 +115,103 @@ body {
   border-radius: 2px;
 }
 
+/* Main */
+.main {
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.main h1 {
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Cuadro blanco para mi formulario*/
+form {
+  background-color: #fff;
+  padding: 40px 0;
+  box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+  /* Para redondear las esquinas*/
+  border-radius: 10px;
+}
+
+.formulario {
+  width: 100%;
+  margin: auto;
+}
+
+form .grupo {
+  position: relative;
+  margin: 45px;
+}
+
+input {
+  background: none;
+  color: #c6c6c6;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  /* Linea arriba de nombre, email y password*/
+  border-bottom: 1px solid var(--colorTextos);
+}
+
+input::focus {
+  outline: none;
+  /* color de mi texto en el formulario */
+  color: #5e5d5d;
+}
+
+label {
+  color: var(--colorTextos);
+  font-size: 16px;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  transition: 0.5s ease-in-out all;
+  pointer-events: none;
+}
+
+input:focus~label {
+  top: -14px;
+  font-size: 12px;
+  color: #2196f3;
+}
+
+.barra {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.barra::before {
+  content: "";
+  height: 2px;
+  bottom: 0;
+  width: 0%;
+  position: absolute;
+  background: linear-gradient(to right, #B06AB3, #4568DC);
+  transition 0.3 ease width;
+  left: 0;
+}
+
+input:focus~.barra::before {
+  width: 100%;
+}
+
+
+
+
 /* Para dispositivos moviles */
 @media (max-width: 768px) {
   body {
     overflow: hidden;
   }
+
   .ham {
     display: block;
     cursor: pointer;
@@ -163,10 +265,23 @@ body {
     transition: opacity 5s ease-out;
     width: 100%;
   }
+
   .menu li {
     text-align: center;
     width: 100%;
     padding: 20px;
+  }
+
+  .main {
+    color: #fff;
+    width: 100%;
+    height: 1000px;
+    border-style: none;
+  }
+
+  .main h1 {
+    text-align: center;
+    margin-top: 170px;
   }
 }
 
@@ -176,6 +291,7 @@ body {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -193,129 +309,11 @@ body {
 .br-2.animado {
   opacity: 0;
 }
+
 .br-3.animado {
   transform: rotate(45deg) translate(-10px, -8px);
 }
 
 .ham.girar:hover {
   transform: rotate(360deg);
-}
-
-/* Main */
-
-/*estilos de formulario*/
-#msform {
-  width: 400px;
-  margin: 50px auto;
-  text-align: center;
-  position: relative;
-}
-#msform fieldset {
-  background: white;
-  border: 0 none;
-  border-radius: 3px;
-  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-  padding: 20px 30px;
-  box-sizing: border-box;
-  width: 80%;
-  margin: 0 10%;
-
-  /*apilamiento de conjuntos de campos uno encima de otro*/
-  position: relative;
-}
-/*Ocultar todo excepto el primer conjunto de campos*/
-#msform fieldset:not(:first-of-type) {
-  display: none;
-}
-/*entradas*/
-#msform input,
-#msform textarea {
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  margin-bottom: 10px;
-  width: 100%;
-  box-sizing: border-box;
-  font-family: montserrat;
-  color: #2c3e50;
-  font-size: 13px;
-}
-/*Botones*/
-#msform .action-button {
-  width: 100px;
-  background: #27ae60;
-  font-weight: bold;
-  color: white;
-  border: 0 none;
-  border-radius: 1px;
-  cursor: pointer;
-  padding: 10px 5px;
-  margin: 10px 5px;
-}
-#msform .action-button:hover,
-#msform .action-button:focus {
-  box-shadow: 0 0 0 2px white, 0 0 0 3px #27ae60;
-}
-/*encabezados*/
-.fs-title {
-  font-size: 15px;
-  text-transform: uppercase;
-  color: #2c3e50;
-  margin-bottom: 10px;
-}
-.fs-subtitle {
-  font-weight: normal;
-  font-size: 13px;
-  color: #666;
-  margin-bottom: 20px;
-}
-/*barra de progreso*/
-#progressbar {
-  margin-bottom: 30px;
-  overflow: hidden;
-  /*Contadores CSS para numerar los pasos*/
-  counter-reset: step;
-}
-#progressbar li {
-  list-style-type: none;
-  color: white;
-  text-transform: uppercase;
-  font-size: 9px;
-  width: 33.33%;
-  float: left;
-  position: relative;
-}
-#progressbar li:before {
-  content: counter(step);
-  counter-increment: step;
-  width: 20px;
-  line-height: 20px;
-  display: block;
-  font-size: 10px;
-  color: #333;
-  background: white;
-  border-radius: 3px;
-  margin: 0 auto 5px auto;
-}
-/*conectores de la barra de progreso*/
-#progressbar li:after {
-  content: "";
-  width: 100%;
-  height: 2px;
-  background: white;
-  position: absolute;
-  left: -50%;
-  top: 9px;
-  z-index: -1; /*Ponerlo detrás de los números*/
-}
-#progressbar li:first-child:after {
-  /*Conector no necesario antes del primer paso*/
-  content: none;
-}
-/*marcar pasos activos/completados green*/
-/*El número del paso y el conector que lo precede = green*/
-#progressbar li.active:before,
-#progressbar li.active:after {
-  background: #27ae60;
-  color: white;
 }

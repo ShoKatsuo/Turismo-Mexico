@@ -20,7 +20,6 @@ body {
   padding: 0 2%;
   */
   padding: 2rem 0;
-  box-sizing: border-box;
   background-color: black;
   position: fixed;
   color: #fff;
@@ -97,6 +96,46 @@ body {
   border-radius: 2px;
 }
 
+/* Main */
+
+.main {
+  color: #fff;
+  width: 100%;
+  height: 1000px;
+  border-style: none;
+}
+
+.main h1 {
+  text-align: center;
+  margin-top: 110px;
+}
+/*
+.container-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+*/
+img {
+  max-width: 100%;
+}
+
+.container-logo {
+  text-align: center;
+}
+
+.main h2 {
+  text-align: center;
+}
+
+.main h3 {
+  text-align: center;
+}
+
+.main a {
+  color: #fff;
+}
+
 /* Para dispositivos moviles */
 @media (max-width: 768px) {
   body {
@@ -160,6 +199,18 @@ body {
     width: 100%;
     padding: 20px;
   }
+
+  .main {
+    color: #fff;
+    width: 100%;
+    height: 1000px;
+    border-style: none;
+  }
+
+  .main h1 {
+    text-align: center;
+    margin-top: 170px;
+  }
 }
 
 /* Animaciones */
@@ -192,6 +243,3 @@ body {
 .ham.girar:hover {
   transform: rotate(360deg);
 }
-
-/* Main */
-
