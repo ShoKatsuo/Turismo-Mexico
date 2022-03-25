@@ -203,3 +203,9 @@ img {
   /* Animaciones */
 
 }
+.tlacuache {
+  text-align: center;
+}
+.tlacuache p {
+  text-align: justify;
+}
