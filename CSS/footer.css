@@ -72,18 +72,22 @@ body {
   transition: all 0.3s ease-out;
 }
 /* Colores para los botones*/
-.wrapper .button:nth-child(1) span {
+.wrapper .button:nth-child(1) a {
   color: #4267b2;
 }
-.wrapper .button:nth-child(2) span {
+.wrapper .button:nth-child(2) a {
   color: #1da1f2;
 }
-.wrapper .button:nth-child(3) span {
+.wrapper .button:nth-child(3) a {
   color: #e1306c;
 }
-.wrapper .button:nth-child(4) span {
+.wrapper .button:nth-child(4) a {
   color: #333;
 }
-.wrapper .button:nth-child(5) span {
+.wrapper .button:nth-child(5) a {
   color: #ff0000;
+}
+
+a {
+  text-decoration: none;
 }
