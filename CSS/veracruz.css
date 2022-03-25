@@ -203,6 +203,13 @@ img {
   /* Animaciones */
 
 }
+.ullua {
+  text-align: center;
+}
+.ullua img {
+  display: inline-block;
+  justify-content: center;
+}
 .tlacuache {
   text-align: center;
 }
