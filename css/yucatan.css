@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+
+::root {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Header*/
+.header {
+  height: 10vh;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+  
+  padding: 0 2%;
+  /*
+  padding: 2rem 0;
+  */
+  box-sizing: border-box;
+  background-color: black;
+  position: fixed;
+  color: #fff;
+}
+
+.header a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  display:flex;
+}
+
+.logo-nav-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  letter-spacing: 15px;
+  font-size: 1.4em;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  list-style-type: none;
+  margin-left: 60px;
+}
+
+.menu li a {
+  padding: 20px 0;
+}
+
+.menu li a:hover {
+  color: #fb743e;
+}
+
+.navigation {
+  transition: all 0.4s linear;
+  border-radius: 5px;
+}
+
+.hamburguer {
+  display: none;
+  /* Fijo en todoa la pagina aunque hagamos scroll*/
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  background: #fff;
+  width: 40px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5)
+}
+
+.menu-navegacion {
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* 30% del ancho de la pagina */
+    width: 30vw;
+    height: 100%;
+    background-color: black ;
+    display: flex;
+    flex-direction: column;
+    /* Espacio equitativamente y verticalmente */
+    justify-content: space-evenly;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    transform: translate(110%);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+/*Creo una nueva clase para un efecto de mi boton */
+.spread {
+  /* Cuando de click en el boton aparece el menu*/
+  transform: translateX(0);
+}
+
+.menu-navegacion a{
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* Main */
+
+.main {
+  color: #fff;
+  width: 100%;
+  height: 1000px;
+  border-style: none;
+}
+
+.main h1 {
+  text-align: center;
+  margin-top: 110px;
+}
+/*
+.container-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+*/
+img {
+  max-width: 100%;
+}
+
+.container-logo {
+  text-align: center;
+}
+
+.main h2 {
+  text-align: center;
+}
+
+.main h3 {
+  text-align: center;
+}
+
+.main a {
+  color: #fff;
+}
+
+/* Para dispositivos moviles */
+@media screen and (max-width: 800px) {
+  .hamburguer {
+    display: flex;
+  }
+
+  .menu-navegacion {
+    width: 50vw;
+  }
+
+  .logo {
+    display:flex;
+    margin-top: 20px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .contenido-header {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 720px;
+  }
+
+  .contenido-header>img {
+    width: 400px;
+  }
+
+.textos-header {
+    margin: 0;
+  }
+
+  .footer {
+    margin-top: 1100px;
+    width: 100%;
+    display: flex;
+  }
+
+  /* Animaciones */
+
+}
