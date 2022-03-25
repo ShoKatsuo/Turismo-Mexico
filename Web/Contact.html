@@ -9,86 +9,69 @@
     <link rel="stylesheet" href="../CSS/contact.css">
 </head>
 <body>
-    <header class="header">
-        <!-- 
-        <iframe src="../Web/header.html" frameborder="0"></iframe>
-        -->
-        <div class="container logo-nav-container">
-            <div class="logo"><a href="../Web/index.html">LOGO Turismo</a></div>
-            <nav class="navigation">
-              <ul class="menu">
-      
-                <!-- Nav -->
-                <li class="nav-1">
-                  <a href="../Web/Hotels.html">Hoteles</a>
-                  <i class="fas fa-arrow-down"></i>
-                  
-                </li>
-      
-                <!-- Nav -->
-                <li class="nav-2">
-                  <a href="../Web/history-mex.html">Historia de Mexico</a>
-                  <i class="fas fa-arrow-down"></i>
-                </li>
-      
-                <!-- Nav -->
-                <li class="nav-3">
-                  <a href="./Contact.html">Contacto</a>
-                  <i class="fas fa-arrow-down"></i>
-                </li>
-  
-                <!-- Nav -->
-                <li class="nav-4">
-                  <a href="./holidays.html">Días festivos</a>
-                  <i class="fas fa-arrow-down"></i>
-                </li>
-              </ul>
-  
-              <button class="ham" type="button">
-                <span class="br-1"></span>
-                <span class="br-2"></span>
-                <span class="br-3"></span>
-              </button>
-            </nav>
-          </div>
-    </header>
+  <header class="header">
+    <div class="container logo-nav-container">
+      <div class="logo"><a href="../Web/index.html">LOGO Turismo</a></div>
+      <nav class="navigation">
+        <ul class="menu">
+          <li><a href="../Web/Hotels.html">Hoteles</a></li>
+          <li><a href="../Web/history-mex.html">Historia de Mexico</a></li>
+          <li><a href="./Contact.html">Contacto</a></li>
+          <li><a href="./holidays.html">Días festivos</a></li>
+        </ul>
 
-    <main class="main">
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <form action="" method="post" id="formulario">
-        <div class="formulario">
-          <h1>Registro</h1>
-          <!-- Nombre -->
-          <div class="grupo">
-            <!--Span sirve para aplicar estilo al texto o agrupar elementos en línea. -->
-            <input type="text" name="" id="nombre" required><span class="barra"></span>
-            <label for="">Nombre</label>
-          </div>
-          <!-- Email -->
-          <div class="grupo">
-            <input type="email" name="" id="email" required><span class="barra"></span>
-            <label for="">Email</label>
-          </div>
-          <!-- Contraseña -->
-          <div class="grupo">
-            <input type="password" name="" id="password" required><span class="barra"></span>
-            <label for="">Contraseña</label>
-          </div>
+      <div class="boton-menu">
+        <img src="../Images/hamburguesa.svg" alt="" class="hamburguer">
+          <nav class="menu-navegacion">
+          <a href="../Web/index.html">Inicio</a>
+          <a href="../Web/Hotels.html">Hoteles</a>
+          <a href="../Web/history-mex.html">Historia de Mexico</a>
+          <a href="../Web/holidays.html">Dias Festivos</a>
+          <a href="../Web/Contact.html">Contactos</a>
+          </nav>
+      </div>
+      </nav>
+    </div>
+  </header>
 
-          <button type="submit">Suscribirte</button>
+  <main class="main">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form action="" method="post" id="formulario">
+      <div class="formulario">
+        <h1>Registro</h1>
+        <!-- Nombre -->
+        <div class="grupo">
+          <!--Span sirve para aplicar estilo al texto o agrupar elementos en línea. -->
+          <input type="text" name="" id="nombre" required><span class="barra"></span>
+          <label for="">Nombre</label>
         </div>
-      </form>
-    </main>
+        <!-- Email -->
+        <div class="grupo">
+          <input type="email" name="" id="email" required><span class="barra"></span>
+          <label for="">Email</label>
+        </div>
+        <!-- Contraseña -->
+        <div class="grupo">
+          <input type="password" name="" id="password" required><span class="barra"></span>
+          <label for="">Contraseña</label>
+        </div>
 
-    <footer class="footer">
-      
-    </footer>
+          <button type="submit" class="boton-form">Suscribirte</button>
+        
+        
+      </div>
+    </form>
+  </main>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="../JS/contact.js"></script>
+  <footer class="footer">
+    
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../JS/menu.js"></script>
 </body>
 </html>

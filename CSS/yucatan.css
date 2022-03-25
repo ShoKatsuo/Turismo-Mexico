@@ -2,10 +2,16 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
 
+::root {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
+
 body {
   background-color: #333;
   font-family: "Open Sans", sans-serif;
@@ -13,13 +19,16 @@ body {
 
 /* Header*/
 .header {
+  height: 10vh;
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
   width: 100%;
-  /*
+  
   padding: 0 2%;
-  */
+  /*
   padding: 2rem 0;
+  */
+  box-sizing: border-box;
   background-color: black;
   position: fixed;
   color: #fff;
@@ -29,6 +38,7 @@ body {
   text-decoration: none;
   color: #fff;
   font-weight: 700;
+  display:flex;
 }
 
 .logo-nav-container {
@@ -63,38 +73,53 @@ body {
   color: #fb743e;
 }
 
-.menu li a:hover,
-.fas {
-  color: #fb743e;
-}
-
 .navigation {
   transition: all 0.4s linear;
   border-radius: 5px;
 }
 
-.navActive {
-  display: flex;
-}
-
-/* Tres lineas*/
-.ham {
+.hamburguer {
   display: none;
+  /* Fijo en todoa la pagina aunque hagamos scroll*/
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  background: #fff;
+  width: 40px;
   cursor: pointer;
-  border: none;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
+  border-radius: 5px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5)
 }
 
-.ham span {
-  background-color: #f3f3f3;
-  display: block;
-  height: 3px;
-  width: 28px;
-  margin: 10px auto;
-  border-radius: 2px;
+.menu-navegacion {
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* 30% del ancho de la pagina */
+    width: 30vw;
+    height: 100%;
+    background-color: black ;
+    display: flex;
+    flex-direction: column;
+    /* Espacio equitativamente y verticalmente */
+    justify-content: space-evenly;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    transform: translate(110%);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
+
+/*Creo una nueva clase para un efecto de mi boton */
+.spread {
+  /* Cuando de click en el boton aparece el menu*/
+  transform: translateX(0);
+}
+
+.menu-navegacion a{
+  color: #fff;
+  text-decoration: none;
+}
+
 
 /* Main */
 
@@ -137,109 +162,44 @@ img {
 }
 
 /* Para dispositivos moviles */
-@media (max-width: 768px) {
-  body {
-    overflow: hidden;
-  }
-  .ham {
-    display: block;
-    cursor: pointer;
-    position: absolute;
-    top: 40px;
-    right: 25px;
-    transition: 0.2s 0.1s;
+@media screen and (max-width: 800px) {
+  .hamburguer {
+    display: flex;
   }
 
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-top: 25px;
-    padding-bottom: 25px;
+  .menu-navegacion {
+    width: 50vw;
   }
 
-  .navigation {
-    width: 100%;
-    margin-top: 1rem;
-  }
-
-  .navigation ul {
-    display: none;
-  }
-
-  .navigation ul li {
-    display: block;
-  }
-
-  .navigation ul li a {
-    display: block;
-    padding: 0.5rem 0;
-    transition: all 0.4s linear;
-    border-radius: 5px;
-  }
-
-  .logo-nav-container {
-    padding-left: 25px;
-    flex-wrap: wrap;
+  .logo {
+    display:flex;
+    margin-top: 20px;
   }
 
   .menu {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 92vh;
-    margin: 0;
-    padding: 0;
     display: none;
-    opacity: 0;
-    transition: opacity 5s ease-out;
+  }
+
+  .contenido-header {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 720px;
+  }
+
+  .contenido-header>img {
+    width: 400px;
+  }
+
+.textos-header {
+    margin: 0;
+  }
+
+  .footer {
+    margin-top: 1100px;
     width: 100%;
-  }
-  .menu li {
-    text-align: center;
-    width: 100%;
-    padding: 20px;
+    display: flex;
   }
 
-  .main {
-    color: #fff;
-    width: 100%;
-    height: 1000px;
-    border-style: none;
-  }
+  /* Animaciones */
 
-  .main h1 {
-    text-align: center;
-    margin-top: 170px;
-  }
-}
-
-/* Animaciones */
-
-@keyframes muestraMenu {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.menu.activado {
-  display: flex;
-  animation: muestraMenu 350ms ease-in-out both;
-}
-
-.br-1.animado {
-  transform: rotate(-45deg) translate(-10px, 8px);
-}
-
-.br-2.animado {
-  opacity: 0;
-}
-.br-3.animado {
-  transform: rotate(45deg) translate(-10px, -8px);
-}
-
-.ham.girar:hover {
-  transform: rotate(360deg);
 }
