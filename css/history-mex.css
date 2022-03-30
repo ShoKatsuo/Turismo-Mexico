@@ -156,16 +156,77 @@ body {
   text-align: center;
 }
 
+.conq-mex img {
+  width: 38%;
+}
+
 .fun-cmex {
   text-align: center;
 }
 
 .fun-cmex img{
-  width: 35%;
+  width: 40%;
 }
 
 .ep-colonial {
   text-align: center;
+}
+
+.ep-colonial img {
+  width: 35%;
+}
+
+.guerra-indep {
+  text-align: center;
+}
+
+.guerra-indep img {
+  width: 35%;
+}
+
+.first-impermex {
+  text-align: center;
+}
+
+.first-impermex img {
+  width: 35%;
+}
+
+.inter-fran {
+  text-align: center;
+}
+
+.inter-fran img {
+  width: 35%;
+}
+
+.inter-usa {
+  text-align: center;
+}
+
+.inter-usa img {
+  width: 35%;
+}
+
+.rev-mex {
+  text-align: center;
+}
+
+.rev-mex img {
+  width: 35%;
+}
+
+.mex-moderno {
+  text-align: center;
+}
+
+.mex-moderno img {
+  width: 35%;
+}
+
+.fuente-his {
+  text-align: center;
+  font-size: 10pt;
 }
 
 /* Para dispositivos moviles */
