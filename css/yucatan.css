@@ -149,6 +149,22 @@ img {
   text-align: center;
 }
 
+.container-logo img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.piramide {
+  text-align: center;
+}
+.piramide img {
+  margin-bottom: 10px;
+}
+.cenote {
+  text-align: center;
+}
+.cenote img {
+  margin-bottom: 10px;
+}
 .main h2 {
   text-align: center;
 }
@@ -159,6 +175,15 @@ img {
 
 .main a {
   color: #fff;
+}
+.pavo {
+  text-align: center;
+}
+.pavo img {
+  margin-bottom: 10px;
+}
+.localidad {
+  text-align: center;
 }
 
 /* Para dispositivos moviles */
