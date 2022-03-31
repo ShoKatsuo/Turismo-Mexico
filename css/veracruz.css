@@ -210,6 +210,16 @@ img {
   text-align: justify;
   margin-top: 10px;
 }
+.isla {
+  text-align: center;
+}
+.isla img {
+  width: 50%;
+}
+.isla p {
+  text-align: justify;
+  margin-top: 10px;
+}
 .tlacuache {
   text-align: center;
 }
@@ -217,3 +227,8 @@ img {
   text-align: justify;
   margin-top: 10px;
 }
+.localidad {
+  text-align: center;
+}
+
+
