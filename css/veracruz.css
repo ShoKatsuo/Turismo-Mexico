@@ -204,15 +204,16 @@ img {
 
 }
 .ullua {
-  text-align: center;
+  text-align: center;  
 }
-.ullua img {
-  display: inline-block;
-  justify-content: center;
+.ullua p {
+  text-align: justify;
+  margin-top: 10px;
 }
 .tlacuache {
   text-align: center;
 }
 .tlacuache p {
   text-align: justify;
+  margin-top: 10px;
 }
