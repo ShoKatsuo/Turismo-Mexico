@@ -293,3 +293,93 @@ body {
   /* Animaciones */
 
 }
+
+@media screen and (max-width: 500px){
+  .hamburguer {
+    display: flex;
+    top: 20px;
+    right: 20px;
+  }
+
+  .menu-navegacion {
+    width: 65vw;
+  }
+
+  .logo {
+    display:flex;
+    margin-top: 20px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .contenido-header {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 720px;
+  }
+
+  .contenido-header>img {
+    width: 400px;
+  }
+
+  .textos-header {
+    margin: 0;
+  }
+
+  /* main */
+
+  .his-mex img{
+    width: 90%;
+  }
+
+  .civ-meso img{
+    width: 75%;
+  }
+
+  .conq-mex img{
+    width: 75%;;
+  }
+
+  .fun-cmex img {
+    width: 75%;
+  }
+
+  .ep-colonial img {
+    width: 75%;
+  }
+
+  .guerra-indep img {
+    width: 75%;
+    height: 150px;
+  }
+  
+  .first-impermex img {
+    width: 75%;
+  }
+
+  .inter-fran img {
+    width: 75%;
+  }
+
+  .inter-usa img {
+    width: 75%;
+  }
+
+  .rev-mex img {
+    width: 75%;
+  }
+
+  .mex-moderno img {
+    width: 75%;
+  }
+
+
+  /* footer*/
+  .footer {
+    margin-top: 1100px;
+    width: 100%;
+    display: flex;
+  }
+}
