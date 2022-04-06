@@ -195,8 +195,32 @@ h2 {
     width: 400px;
   }
 
-.textos-header {
+  .textos-header {
     margin: 0;
+  }
+
+  /* main */
+
+  .yucatan img {
+    width: 90%;
+  }
+
+  .piramide img {
+    width: 80%;
+  }
+
+
+.cenote img {
+  width: 80%;
+}
+
+  .pavo img {
+  width: 80%;
+  }
+
+  .pavo iframe {
+  width: 70%;
+  height: 20%;
   }
 
   .footer {
@@ -205,10 +229,6 @@ h2 {
     display: flex;
   }
 
-  .pavo iframe {
-  width: 50%;
-  height: 20%;
-  }
   /* Animaciones */
 
 }
