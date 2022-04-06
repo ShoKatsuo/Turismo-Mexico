@@ -204,15 +204,31 @@ img {
 
 }
 .ullua {
+  text-align: center;  
+}
+.ullua p {
+  text-align: justify;
+  margin-top: 10px;
+}
+.isla {
   text-align: center;
 }
-.ullua img {
-  display: inline-block;
-  justify-content: center;
+.isla img {
+  width: 50%;
+}
+.isla p {
+  text-align: justify;
+  margin-top: 10px;
 }
 .tlacuache {
   text-align: center;
 }
 .tlacuache p {
   text-align: justify;
+  margin-top: 10px;
 }
+.localidad {
+  text-align: center;
+}
+
+
