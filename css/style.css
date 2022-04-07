@@ -78,7 +78,7 @@ body {
   /* Fijo en todoa la pagina aunque hagamos scroll*/
   position: fixed;
   top: 30px;
-  right: 30px;
+  right: 10px;
   background: #fff;
   width: 40px;
   cursor: pointer;
@@ -232,7 +232,7 @@ h2 {
 
   .logo {
     display:flex;
-    margin-top: 20px;
+    margin-top: 30px;
   }
 
   .menu {

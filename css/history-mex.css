@@ -225,18 +225,23 @@ body {
 
 /* Para dispositivos moviles */
 @media screen and (max-width: 800px) {
-  
+  .header {
+    position: fixed;
+    margin-top: -30px;
+  }
+
   .hamburguer {
     display: flex;
+    margin-top: -12px;
   }
 
   .menu-navegacion {
-    width: 50vw;
+    width: 60vw;
   }
 
   .logo {
-    display:flex;
-    margin-top: 20px;
+    display: flex;
+    margin-top: 35px;
   }
 
   .menu {
@@ -259,6 +264,10 @@ body {
 
   /* main */
 
+  .his-mex h1 {
+    margin-top: 60px;
+  }
+
   .his-mex img{
     width: 400px;
     height: 200px;
@@ -276,20 +285,16 @@ body {
 
   .fun-cmex img {
     width: 350px;
-
   }
-
-  /* footer*/
-  .footer {
-    margin-top: 1100px;
-    width: 100%;
-    display: flex;
-  }
-  /* Animaciones */
 
 }
 
 @media screen and (max-width: 500px){
+
+  .header {
+    display: fixed;
+  }
+
   .hamburguer {
     display: flex;
     top: 20px;
@@ -302,7 +307,10 @@ body {
 
   .logo {
     display:flex;
-    margin-top: 20px;
+  }
+
+  .logo a {
+    margin-top: 10px;
   }
 
   .menu {
@@ -370,11 +378,4 @@ body {
     width: 75%;
   }
 
-
-  /* footer*/
-  .footer {
-    margin-top: 1100px;
-    width: 100%;
-    display: flex;
-  }
 }
